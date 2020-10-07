@@ -19,6 +19,12 @@ class Index extends BaseController
     public function test()
     {
         dump(env('database.hostname'), Env::get('database.hostname'));
-        dump(111);
+
+        dd('', config('config'));
+    }
+
+    public function call_test()
+    {
+        $this->test();
     }
 }
