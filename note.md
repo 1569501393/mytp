@@ -1,3 +1,28 @@
+vscode配置git终端
+C:\Users\Administrator\AppData\Roaming\Code\User\settings.json
+    "terminal.integrated.shell.windows": "D:/software/Git/bin/bash.exe",
+
+
+Git中的“LF will be replaced by CRLF”警告详解
+https://blog.csdn.net/taiyangdao/article/details/78629107
+
+
+  340  git config --get core.autocrlf
+  341  git config --global --get core.autocrlf
+  342  git config core.autocrlf false
+
+Administrator@SKY-20191125ANA MINGW64 /d/www/git/mytp (test)
+$ git add .
+warning: LF will be replaced by CRLF in composer.lock.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in config/trace.php.
+The file will have its original line endings in your working directory.
+
+
+
+开启 mbstring
+ 919 extension=mbstring
+
 Administrator@SKY-20191125ANA MINGW64 /d/www/git/mytp (test)
 $ php --ini
 Configuration File (php.ini) Path: C:\WINDOWS
