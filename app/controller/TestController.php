@@ -1,14 +1,11 @@
 <?php
-
-declare(strict_types = 1);
+declare (strict_types = 1);
 
 namespace app\controller;
 
-use app\BaseController;
-use think\facade\Db;
 use think\Request;
 
-class Test extends BaseController
+class TestController
 {
     /**
      * 显示资源列表
@@ -17,15 +14,8 @@ class Test extends BaseController
      */
     public function index()
     {
-        // return '这是test首页';
-        $data = [
-            'a' => 1,
-            'b' => 2,
-            'c' => 3,
-        ];
-        // halt('中断测试');
-        // return json($data);
-        return "index,方法名：" . $this->request->action() . ",当前实际路径：" . $this->app->getAppPath();
+        //
+        return '这是TestController首页';
     }
 
     /**
@@ -41,7 +31,7 @@ class Test extends BaseController
     /**
      * 保存新建的资源
      *
-     * @param \think\Request $request
+     * @param  \think\Request  $request
      * @return \think\Response
      */
     public function save(Request $request)
@@ -52,7 +42,7 @@ class Test extends BaseController
     /**
      * 显示指定的资源
      *
-     * @param int $id
+     * @param  int  $id
      * @return \think\Response
      */
     public function read($id)
@@ -63,7 +53,7 @@ class Test extends BaseController
     /**
      * 显示编辑资源表单页.
      *
-     * @param int $id
+     * @param  int  $id
      * @return \think\Response
      */
     public function edit($id)
@@ -74,8 +64,8 @@ class Test extends BaseController
     /**
      * 保存更新的资源
      *
-     * @param \think\Request $request
-     * @param int $id
+     * @param  \think\Request  $request
+     * @param  int  $id
      * @return \think\Response
      */
     public function update(Request $request, $id)
@@ -86,21 +76,11 @@ class Test extends BaseController
     /**
      * 删除指定资源
      *
-     * @param int $id
+     * @param  int  $id
      * @return \think\Response
      */
     public function delete($id)
     {
         //
-    }
-
-
-    public function test()
-    {
-        // $res = Db::table('tp_book')->select();
-        $res = Db::name('tp_book')->select();
-
-        // $res = M('tp_book')->select();
-        dd($res);
     }
 }
