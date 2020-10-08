@@ -3,6 +3,7 @@ declare (strict_types = 1);
 
 namespace app\controller;
 
+use think\facade\Db;
 use think\Request;
 
 class Test
@@ -14,9 +15,9 @@ class Test
      */
     public function index()
     {
-        dd('test');
+        //
     }
-    
+
     /**
      * 显示创建资源表单页.
      *
@@ -84,13 +85,13 @@ class Test
     }
 
 
-    /**
-     * Undocumented function
-     *
-     * @return void
-     */
-    public function test(){
-        return 111;
-        
+    public function test()
+    {
+        // $res = Db::table('tp_book')->select();
+        $res = Db::name('tp_book')->select();
+        Db::
+
+        // $res = M('tp_book')->select();
+        dd($res);
     }
 }

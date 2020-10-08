@@ -1,9 +1,8 @@
 <?php
-
 namespace app\controller;
 
 use app\BaseController;
-use think\response\Json;
+use think\facade\Env;
 
 class Index extends BaseController
 {
@@ -19,14 +18,13 @@ class Index extends BaseController
 
     public function test()
     {
-        $a = 1;
-        $b = 2;
-        if ($a == 1) {
-            dd('ok');
-        }
+        dump(env('database.hostname'), Env::get('database.hostname'));
 
-        $res = $a + $b;
-        // return Json();
-        dd($res);
+        dd('', config('config'));
+    }
+
+    public function call_test()
+    {
+        $this->test();
     }
 }
