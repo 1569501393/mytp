@@ -1,7 +1,9 @@
 <?php
+
 namespace app\controller;
 
 use app\BaseController;
+use think\response\Json;
 
 class Index extends BaseController
 {
@@ -13,5 +15,18 @@ class Index extends BaseController
     public function hello($name = 'ThinkPHP6')
     {
         return 'hello,' . $name;
+    }
+
+    public function test()
+    {
+        $a = 1;
+        $b = 2;
+        if ($a == 1) {
+            dd('ok');
+        }
+
+        $res = $a + $b;
+        // return Json();
+        dd($res);
     }
 }
