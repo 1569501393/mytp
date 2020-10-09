@@ -18,14 +18,16 @@ class Test extends BaseController
     public function index()
     {
         // return '这是test首页';
-        $data = [
+        /*$data = [
             'a' => 1,
             'b' => 2,
             'c' => 3,
-        ];
+        ];*/
         // halt('中断测试');
         // return json($data);
-        return "index,方法名：" . $this->request->action() . ",当前实际路径：" . $this->app->getAppPath();
+
+        // return "index,方法名：" . $this->request->action() . ",当前实际路径：" . $this->app->getAppPath();
+        return env('my.name');
     }
 
     /**

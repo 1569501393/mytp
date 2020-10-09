@@ -14,8 +14,8 @@ class Error {
     }
 
 
-    /*public function __call($method, $args)
+    public function __call($method, $args)
     {
         return '当前控制器不在2';
-    }*/
+    }
 }
